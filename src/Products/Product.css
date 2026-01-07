@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 20rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     z-index: -2;
 }
 
@@ -11,6 +11,9 @@
     border: 2px solid #ededed;
     padding: 20px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .card-img {

@@ -11,6 +11,7 @@ import "./index.css";
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+
   // ----------- Input Filter -----------
   const [query, setQuery] = useState("");
 
@@ -27,12 +28,12 @@ function App() {
     setSelectedCategory(event.target.value);
   };
 
-  // ------------ Button Filtering -----------
+  // ------------ Button Filtering ---------
   const handleClick = (event) => {
     setSelectedCategory(event.target.value);
   };
 
-  function filteredData(products, selected, query) {
+  function filteredData(products, selectedCategory, query) {
     let filteredProducts = products;
 
     // Filtering Input Items
@@ -41,7 +42,7 @@ function App() {
     }
 
     // Applying selected filter
-    if (selected) {
+    if (selectedCategory) {
       filteredProducts = filteredProducts.filter(
         ({ category, color, company, newPrice, title }) =>
           category === selected ||
